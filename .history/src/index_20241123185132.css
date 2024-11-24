@@ -1,0 +1,99 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  margin: 0 auto;
+}
+
+.container {
+  width: 70vw;
+  min-height: 100vh;
+  margin: auto;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  align-self: start;
+  padding: 20px;
+}
+
+.box,
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; /* To position the custom arrow inside the select */
+  width: 60vw; /* Matches the width of the select */
+  margin: auto;
+  align-content: flex-start;
+  align-items: flex-start;
+  align-self: start;
+}
+
+select {
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* Safari support */
+  -moz-appearance: none; /* Firefox support */
+  background-color: rgb(248, 158, 173); /* Background color */
+  border: 2px solid #815863; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 5px; /* Padding inside the dropdown */
+  font-size: 16px; /* Font size */
+  color: #333; /* Font color */
+  width: 70vw; /* Width of the dropdown */
+  height: 40px;
+  cursor: pointer; /* Change cursor to pointer */
+  margin: auto;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.box::after {
+  content: "▼"; /* Custom dropdown arrow */
+  position: absolute;
+  right: 5%; /* Position arrow to the right */
+  top: 85%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  pointer-events: none; /* Make sure the arrow does not block clicks */
+  color: #333; /* Arrow color */
+  font-size: 18px; /* Adjust arrow size */
+}
+
+select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #b03866; /* Focus border color */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional focus shadow */
+}
+
+option {
+  font-size: 16px;
+}
+
+
+

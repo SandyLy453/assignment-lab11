@@ -1,0 +1,74 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 70vw;
+  margin: auto;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; /* To position the custom arrow inside the select */
+  width: 60vw; /* Matches the width of the select */
+  margin: auto;
+}
+
+select {
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* Safari support */
+  -moz-appearance: none; /* Firefox support */
+  background-color: rgb(248, 158, 173); /* Background color */
+  border: 2px solid #815863; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 5px; /* Padding inside the dropdown */
+  font-size: 16px; /* Font size */
+  color: #333; /* Font color */
+  width: 60vw; /* Width of the dropdown */
+  height: 40px;
+  cursor: pointer; /* Change cursor to pointer */
+  margin: auto;
+  align-items: center;
+}
+
+select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #b03866; /* Focus border color */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional focus shadow */
+}
+
+.box::after {
+  content: "▼"; /* Custom dropdown arrow */
+  position: absolute;
+  right: 15px; /* Position arrow to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  pointer-events: none; /* Make sure the arrow does not block clicks */
+  color: #333; /* Arrow color */
+  font-size: 18px; /* Adjust arrow size */
+}
+
+option {
+  font-size: 16px;
+}
+
+
+
